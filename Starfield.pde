@@ -23,8 +23,8 @@ class NormalParticle implements Particle
 	double x,y,angle,speed;
 	int mycolor1,mycolor2,mycolor3;
 	NormalParticle(){
-		x=200+Math.random()*50-25;
-		y=200+Math.random()*50-25;
+		x=200;
+		y=200;
 		angle=(Math.random()*8);
 		speed=(Math.random()*8);
 		mycolor1=(int)(Math.random()*256);
@@ -41,8 +41,8 @@ class NormalParticle implements Particle
 	}
 	public void infinity(){
 		if(x<0||400<x||y<0||400<y){
-			x=200+Math.random()*50-25;
-			y=200+Math.random()*50-25;
+			x=200;
+			y=200;
 		}
 	}
 }
@@ -73,7 +73,12 @@ class OddballParticle implements Particle
 		fill(mycolor1,mycolor2,mycolor3);
 		rect((float)x,(float)y,30,30);
 	}
-	public void infinity(){}
+	public void infinity(){
+		if(x<0||400<x||y<0||400<y){
+			x=200;
+			y=200;
+		}
+	}
 }
 class JumboParticle implements Particle
 {
@@ -96,6 +101,10 @@ class JumboParticle implements Particle
 		fill(mycolor1,mycolor2,mycolor3);
 		ellipse((float)x,(float)y,100,100);
 	}
-	public void infinity(){}
+	public void infinity(){
+		if(x<0||400<x||y<0||400<y){
+			x=200;
+			y=200;
+		}
+	}
 }
-
