@@ -2,7 +2,7 @@ Particle[]galaxy;
 void setup()
 {
 	size(400,400);
-	galaxy=new Particle[500];
+	galaxy=new Particle[250];
 	galaxy[0]=new OddballParticle();
 	galaxy[1]=new JumboParticle();
 	for(int i=2;i<galaxy.length;i++){
